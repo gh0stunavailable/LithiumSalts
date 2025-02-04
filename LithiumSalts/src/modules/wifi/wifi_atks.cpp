@@ -381,8 +381,13 @@ const char Beacons[] PROGMEM = {
     "Planet Express\n"
     "Wu Tang LAN\n"
     "Darude LANstorm\n"
-    "Never Gonna Give You Up\n"
-    "Hide Yo Kids, Hide Yo Wi-Fi\n"
+    "DMX\n"
+    "'Cause If You Want It, We Got It\n"
+    "Come And Get It, Nigga, We With It\n"
+    "All You Gotta Do Is Set It, Baby\n"
+    "Ride Or Die\n"
+    "What Y'All Nigga's Want? (Uh, Uh, Uh, Uh)\n"
+    "What Y'All Nigga's Want? (What)\n"
     "Loading…\n"
     "Searching…\n"
     "VIRUS.EXE\n"
@@ -399,21 +404,20 @@ const char Beacons[] PROGMEM = {
     "404 Wi-Fi Unavailable\n"
     "Porque-Fi\n"
     "Titanic Syncing\n"
-    "Test Wi-Fi Please Ignore\n"
+    "When The Pimps In The Crib Ma\n"
     "Drop It Like It's Hotspot\n"
     "Life in the Fast LAN\n"
-    "The Creep Next Door\n"
-    "Ye Olde Internet\n"};
+    "A Fuck Nigga, Thats That Shit I Don't Like\n"};
 
-const char rickrollssids[] PROGMEM = {
-    "01 Never gonna give you up\n"
-    "02 Never gonna let you down\n"
-    "03 Never gonna run around\n"
-    "04 and desert you\n"
-    "05 Never gonna make you cry\n"
-    "06 Never gonna say goodbye\n"
-    "07 Never gonna tell a lie\n"
-    "08 and hurt you\n"};
+const char lovesosassids[] PROGMEM = {
+    "01 These Bitches Love Sosa\n"
+    "02 O End Or No End\n"
+    "03 Fuckin' With Them O' Boys\n"
+    "04 You Gon' Get Fucked Over\n"
+    "'Raris And Rovers\n"
+    "06 These Hoes Love Chief Sosa\n"
+    "07 Hit 'Em With That Cobra\n"
+    "08 Now That Boy Slumped Over\n"};
 
 uint8_t packet[128] = {0x80, 0x00, 0x00, 0x00,                                // Frame Control, Duration
                        /*4*/ 0xff, 0xff, 0xff, 0xff, 0xff, 0xff,              // Destination address
@@ -590,7 +594,7 @@ void beaconAttack()
     }
     else if (BeaconMode == 1)
     {
-      beaconSpamList(rickrollssids);
+      beaconSpamList(lovesosassids);
     }
     else if (BeaconMode == 2)
     {
