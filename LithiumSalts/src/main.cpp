@@ -190,7 +190,7 @@ void boot_screen() {
   tft.setTextSize(FP);
   tft.drawCentreString(LithiumSalts_VERSION, tftWidth / 2, 25, SMOOTH_FONT);
   tft.setTextSize(FM);
-  tft.drawCentreString("PREDATORY FIRMWARE", tftWidth / 2, tftHeight+2, SMOOTH_FONT); // will draw outside the screen on non touch devices
+  tft.drawCentreString("LOVE SOSA", tftWidth / 2, tftHeight+2, SMOOTH_FONT); // will draw outside the screen on non touch devices
 }
 
 /*********************************************************************
@@ -213,8 +213,8 @@ void boot_screen_anim() {
       tft.fillRect(0,45,tftWidth,tftHeight-45,LithiumSaltsConfig.bgColor);
       if(boot_img > 0 && !drawn) {
         tft.fillScreen(LithiumSaltsConfig.bgColor);
-        if(boot_img==1)       { showJpeg(SD,"/boot.jpg",0,0,true);           Serial.println("Image from SD"); }
-        else if (boot_img==2) { showJpeg(LittleFS,"/boot.jpg",0,0,true);     Serial.println("Image from LittleFS"); }
+        if(boot_img==1)       { showJpeg(SD,"/boot.png",0,0,true);           Serial.println("Image from SD"); }
+        else if (boot_img==2) { showJpeg(LittleFS,"/boot.png",0,0,true);     Serial.println("Image from LittleFS"); }
         else if (boot_img==3) { showGif(&SD,"/boot.gif",0,0,true,3600);       Serial.println("Image from SD"); }
         else if (boot_img==4) { showGif(&LittleFS,"/boot.gif",0,0,true,3600); Serial.println("Image from LittleFS"); }
       }
@@ -280,8 +280,8 @@ void startup_sound() {
   /*  2fix: menu infinite loop */
   #elif defined(HAS_NS4168_SPKR)
     // play a boot sound
-    if(SD.exists("/boot.wav")) playAudioFile(&SD, "/boot.wav");
-    else if(LittleFS.exists("/boot.wav")) playAudioFile(&LittleFS, "/boot.wav");
+    if(SD.exists("/boot.mp3")) playAudioFile(&SD, "/boot.mp3");
+    else if(LittleFS.exists("/boot.mp3")) playAudioFile(&LittleFS, "/boot.mp3");
   #endif
 #endif
 }
