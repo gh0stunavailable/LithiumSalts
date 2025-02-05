@@ -175,10 +175,3 @@ String encryptString(String& plaintext, const String& password_str) {
   
   return out;
 }
-
-/* OLD:
-String decryptString(String& cypertext, const String& password_str) 
-  
-  return xorEncryptDecryptMD5(cypertextData, password_str);
-}
-*/
