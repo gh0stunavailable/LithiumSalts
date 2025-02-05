@@ -1,6 +1,6 @@
 #include <Arduino.h>
 #include <MD5Builder.h>
-
+#include <picosha2.h> //will be used to increase hash security.
 #include "passwords.h"
 #include <globals.h>
 #include "sd_functions.h"
